@@ -12,7 +12,7 @@ def index(request):
 
 def brand_detail(request, brand_id):
     brand = get_object_or_404(Brand, pk=brand_id)
-    return render(request, "marketplace/detail.html", {
+    return render(request, "marketplace/brand_detail.html", {
         "brand": brand
     })
 
