@@ -9,7 +9,7 @@ class Brand(models.Model):
 
     # String method
     def __str__(self):
-        return self.name
+        return f'Brand name:{self.name} - Product Quantity:{self.product_quantity} - Contact:@{self.instagram}'
 
 
 class Product(models.Model):
@@ -17,10 +17,10 @@ class Product(models.Model):
     brand_id = models.ForeignKey(Brand, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=250)
-    image = models.ImageField
     price = models.FloatField
     quantity = models.IntegerField
+    #image = models.ImageField
 
     # String method
     def __str__(self):
-        return str(self.brand_id) + self.name + self.description + str(self.price) + str(self.quantity)
+        return f'brand id:{self.brand_id} - Product Name:{self.name} - Quantity:@{self.quantity}'
