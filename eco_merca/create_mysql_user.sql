@@ -1,6 +1,6 @@
--- Create ecomerca db
-USE mysql;
-CREATE USER [IF NOT EXISTS] 'miau'@'localhost'
+-- Create ecomerca user
+-- Execute this with: sudo mysql -u root -p < create_mysql_user.sql
+CREATE USER IF NOT EXISTS 'ecomerca'@'localhost'
     IDENTIFIED BY 'Ecomerca#123';
-CREATE DATABASE [IF NOT EXISTS] ecomercadb;
-GRANT ALL PRIVILEGES ON ecomerca.* TO 'ecomerca'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'ecomerca'@'localhost';
+FLUSH PRIVILEGES;

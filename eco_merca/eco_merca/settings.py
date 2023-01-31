@@ -80,9 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST':'localhost',
         'PORT':'3306',
-        'USER': 'root',
+        'USER': 'ecomerca',
         'PASSWORD': 'Ecomerca#123',
-        'NAME': 'ecomerca',
+        'NAME': 'ecomercadb',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
